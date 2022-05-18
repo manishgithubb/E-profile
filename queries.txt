@@ -1,0 +1,78 @@
+use test;
+
+CREATE TABLE user_details
+(
+user_id int(7) primary key,
+user_en_fname varchar(50) not null,
+user_en_lname varchar(50) not null,
+user_dn_fname varchar(50) not null,
+user_dn_lname varchar(50) not null,
+user_mobileno varchar(10) not null,
+user_email varchar(100) null,
+user_addr varchar(225) null,
+user_pincode int(6) null,
+user_role_id int(4) foreign_key,
+user_pwd varchar(225) not null, 
+dateOfCreation timestamp(6) null,
+lastModifiedDate timestamp(6) null,
+isDelete tinyint(1) 0,
+dateOfDeletion timestamp(6) null,
+isDisabled tinyint(1) 0,
+dateOfDisable tinyint(1) 0,
+);
+
+
+
+CREATE TABLE role_master
+(
+role_id int(4) primary key,
+role_name varchar(200) not null,
+
+dateOfCreation timestamp(6) null,
+lastModifiedDate timestamp(6) null,
+isDelete tinyint(1) 0,
+dateOfDeletion timestamp(6) null,
+isDisabled tinyint(1) 0,
+dateOfDisable tinyint(1) 0,
+);
+
+
+
+CREATE TABLE aboutapp
+(
+ap_id int (4) primary key,
+ap_en_fname varchar(50) not null,
+ap_en_iname varchar(50) not null,
+ap_dn_name varchar(50) not null,
+ap_designation varchar(100) not null,
+ap_mobileno varchar(10) not null,
+ap_email varchar(100) null,
+ap_addr varchar(255) null,
+ap_pincode int(6) null
+ap_desc varchar(200) null,
+
+
+dateOfCreation timestamp(6) null,
+lastModifiedDate timestamp(6) null,
+isDelete tinyint(1) 0,
+dateOfDeletion timestamp(6) null,
+isDisabled tinyint(1) 0,
+dateOfDisable tinyint(1) 0,
+);
+
+
+
+
+CREATE TABLE suggestion_details
+(
+suggestion_id int primary key,
+suggestion_title varchar(50) not null,
+suggestion_description varchar(250) not null,
+suggestion_category varchar(100) not null,
+dateOfCreation timestamp(6) null,
+lastModifiedDate timestamp(6) null,
+isDelete tinyint(1) 0,
+dateOfDeletion timestamp(6) null,
+isDisabled tinyint(1) 0,
+dateOfDisable tinyint(1) 0,
+);
